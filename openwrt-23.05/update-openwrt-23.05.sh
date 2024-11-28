@@ -79,17 +79,17 @@ rm -rf package/kernel/{r8168,r8101,r8125,r8126}/.git
 git clone https://$github/pmkol/package_new_shortcut-fe package/new/shortcut-fe --depth=1
 rm -rf package/new/shortcut-fe/.git
 # shortcut-fe kernel patch
-curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/601-netfilter-export-udp_get_timeouts-function.patch > target/linux/generic/hack-$kernel_version/601-netfilter-export-udp_get_timeouts-function.patch
-curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/953-net-patch-linux-kernel-to-support-shortcut-fe.patch > target/linux/generic/hack-$kernel_version/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
+curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/601-netfilter-export-udp_get_timeouts-function.patch > target/linux/generic/hack-6.11/601-netfilter-export-udp_get_timeouts-function.patch
+curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/953-net-patch-linux-kernel-to-support-shortcut-fe.patch > target/linux/generic/hack-6.11/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 
 # FullCone module
 git clone https://$github/pmkol/package_new_nft-fullcone package/new/nft-fullcone --depth=1
 rm -rf package/new/nft-fullcone/.git
 # fullcone kernel patch
-curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/952-net-conntrack-events-support-multiple-registrant.patch > target/linux/generic/hack-$kernel_version/952-net-conntrack-events-support-multiple-registrant.patch
+curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/952-net-conntrack-events-support-multiple-registrant.patch > target/linux/generic/hack-6.11/952-net-conntrack-events-support-multiple-registrant.patch
 # bcm-fullcone kernel patch
-curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/982-add-bcm-fullcone-support.patch > target/linux/generic/hack-$kernel_version/982-add-bcm-fullcone-support.patch
-curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/983-add-bcm-fullcone-nft_masq-support.patch > target/linux/generic/hack-$kernel_version/983-add-bcm-fullcone-nft_masq-support.patch
+curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/982-add-bcm-fullcone-support.patch > target/linux/generic/hack-6.11/982-add-bcm-fullcone-support.patch
+curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/983-add-bcm-fullcone-nft_masq-support.patch > target/linux/generic/hack-6.11/983-add-bcm-fullcone-nft_masq-support.patch
 
 # IPv6 NAT
 git clone https://$github/pmkol/package_new_nat6 package/new/nat6 --depth=1
