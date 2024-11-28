@@ -73,7 +73,7 @@ git clone https://github.com/sbwml/package_kernel_r8152 package/kernel/r8152 --d
 git clone https://github.com/sbwml/package_kernel_r8101 package/kernel/r8101 --depth 1
 git clone https://github.com/sbwml/package_kernel_r8125 package/kernel/r8125 --depth 1
 git clone https://github.com/sbwml/package_kernel_r8126 package/kernel/r8126 --depth 1
-rm -rf package/kernel/{r8168,r8101,r8125,r8126}/.git
+rm -rf package/kernel/{r8168,r8152,r8101,r8125,r8126}/.git
 
 # Shortcut Forwarding Engine
 git clone https://$github/pmkol/package_new_shortcut-fe package/new/shortcut-fe --depth=1
