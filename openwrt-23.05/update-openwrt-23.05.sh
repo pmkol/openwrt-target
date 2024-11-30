@@ -100,3 +100,7 @@ rm -rf package/new/nat6/{.git,.github}
 rm -rf package/system/urngd
 git clone https://github.com/sbwml/package_system_urngd package/system/urngd --depth=1
 rm -rf package/system/urngd/.git
+
+# tcp-brutal
+git clone https://github.com/sbwml/package_kernel_tcp-brutal package/kernel/tcp-brutal --depth=1
+rm -rf package/kernel/tcp-brutal/.git
