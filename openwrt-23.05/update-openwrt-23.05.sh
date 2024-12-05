@@ -2,7 +2,7 @@
 
 # kernel generic patches
 rm -rf target/linux/generic
-git clone https://$github/pmkol/target_linux_generic target/linux/generic -b 6.11.6 --depth=1
+git clone https://$github/pmkol/openwrt-target target/linux/generic -b linux-6.11 --depth=1
 rm -rf target/linux/generic/.git
 
 # x86_64 - target 6.11
