@@ -16,6 +16,7 @@ rm -rf target/linux/x86/{config-5.15,patches-5.15}
 sed -ri "s/(KERNEL_PATCHVER:=)[^\"]*/\16.11/" target/linux/x86/Makefile
 curl -s https://$mirror/openwrt-23.05/patch/openwrt-6.x/x86/base-files/etc/board.d/01_leds > target/linux/x86/base-files/etc/board.d/01_leds
 curl -s https://$mirror/openwrt-23.05/patch/openwrt-6.x/x86/base-files/etc/board.d/02_network > target/linux/x86/base-files/etc/board.d/02_network
+curl -s https://$mirror/openwrt-23.05/patch/openwrt-6.x/x86/base-files/etc/board.d/03_model > target/linux/x86/base-files/etc/board.d/03_model
 
 # rockchip - target - r4s/r5s only
 rm -rf target/linux/rockchip

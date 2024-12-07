@@ -1,0 +1,11 @@
+#
+# Copyright © 2024 OpenWrt.org
+#
+# https://github.com/pmkol/openwrt-lite
+#
+
+if [ -f /sys/class/dmi/id/product_name ]; then
+	[ $(grep -c -i "Default string" /sys/class/dmi/id/product_name) -ge 1 ] && echo "Industrial Router" > /tmp/sysinfo/model
+fi
+
+exit 0
