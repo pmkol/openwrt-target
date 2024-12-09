@@ -18,10 +18,15 @@ curl -s https://$mirror/openwrt-23.05/patch/openwrt-6.x/x86/base-files/etc/board
 curl -s https://$mirror/openwrt-23.05/patch/openwrt-6.x/x86/base-files/etc/board.d/02_network > target/linux/x86/base-files/etc/board.d/02_network
 curl -s https://$mirror/openwrt-23.05/patch/openwrt-6.x/x86/base-files/etc/board.d/03_model > target/linux/x86/base-files/etc/board.d/03_model
 
-# rockchip - target - r4s/r5s only
+# rockchip - target - r4s/r5s
 rm -rf target/linux/rockchip
 git clone https://$github/pmkol/target_linux_rockchip target/linux/rockchip -b linux-6.11 --depth=1
 rm -rf target/linux/rockchip/.git
+
+# rockchip - target - armsr/armv8
+rm -rf target/linux/armsr
+git clone https://$github/pmkol/target_linux_rockchip target/linux/armsr -b armsr --depth=1
+rm -rf target/linux/armsr/.git
 
 # linux-firmware: rtw89 / rtl8723d / rtl8821c /i915 firmware
 rm -rf package/firmware/linux-firmware
