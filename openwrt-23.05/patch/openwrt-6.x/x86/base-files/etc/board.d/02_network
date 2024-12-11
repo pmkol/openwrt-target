@@ -8,10 +8,11 @@
 board_config_update
 
 if [ -f /sys/class/dmi/id/product_name ]; then
-	[ $(grep -c -i -E "virtual|kvm|qemu|ecs|cvm" /sys/class/dmi/id/product_name) -ge 1 ] && alias board_name="echo virtual_platform" && {
+	[ $(grep -c -i -E "virtual|kvm|qemu" /sys/class/dmi/id/product_name) -ge 1 ] && {
 	sleep 10
 	dmesg | grep -q "Detected Tx Unit Hang" 2>/dev/null && /etc/init.d/network restart
 	} &
+	[ $(grep -c -i -E "virtual|kvm|qemu|ecs|cvm" /sys/class/dmi/id/product_name) -ge 1 ] && alias board_name="echo virtual_platform"
 fi
 
 case "$(board_name)" in
