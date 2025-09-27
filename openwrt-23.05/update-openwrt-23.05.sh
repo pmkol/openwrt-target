@@ -20,31 +20,31 @@ curl -s https://$mirror/openwrt-23.05/patch/openwrt-6.x/x86/base-files/etc/board
 
 # rockchip - target - r4s/r5s
 rm -rf target/linux/rockchip
-git clone https://$github/pmkol/target_linux_rockchip target/linux/rockchip -b linux-6.11 --depth=1
+git clone https://$github/apadpro/target_linux_rockchip target/linux/rockchip -b linux-6.11 --depth=1
 rm -rf target/linux/rockchip/.git
 
 # rockchip - target - armsr/armv8
 rm -rf target/linux/armsr
-git clone https://$github/pmkol/target_linux_rockchip target/linux/armsr -b armsr --depth=1
+git clone https://$github/apadpro/target_linux_rockchip target/linux/armsr -b armsr --depth=1
 rm -rf target/linux/armsr/.git
 
 # linux-firmware: rtw89 / rtl8723d / rtl8821c /i915 firmware
 rm -rf package/firmware/linux-firmware
-git clone https://$github/pmkol/package_firmware_linux-firmware package/firmware/linux-firmware --depth=1
+git clone https://$github/apadpro/package_firmware_linux-firmware package/firmware/linux-firmware --depth=1
 rm -rf package/kernel/linux-firmware/.git
 
 # rtl8812au-ct - fix linux-6.11
 rm -rf package/kernel/rtl8812au-ct
-git clone https://$github/pmkol/package_kernel_rtl8812au-ct package/kernel/rtl8812au-ct --depth=1
+git clone https://$github/apadpro/package_kernel_rtl8812au-ct package/kernel/rtl8812au-ct --depth=1
 rm -rf package/kernel/rtl8812au-ct/{.git,.github}
 
 # add rtl8812au-ac
-git clone https://$github/pmkol/package_kernel_rtl8812au-ac package/kernel/rtl8812au-ac --depth=1
+git clone https://$github/apadpro/package_kernel_rtl8812au-ac package/kernel/rtl8812au-ac --depth=1
 rm -rf package/kernel/rtl8812au-ac/{.git,.github}
 
 # ath10k-ct
 rm -rf package/kernel/ath10k-ct
-git clone https://$github/pmkol/package_kernel_ath10k-ct package/kernel/ath10k-ct --depth=1
+git clone https://$github/apadpro/package_kernel_ath10k-ct package/kernel/ath10k-ct --depth=1
 rm -rf package/kernel/ath10k-ct/{.git,.github}
 
 # mt76 - 2024-10-11
@@ -55,7 +55,7 @@ curl -s https://$mirror/openwrt-23.05/patch/mt76/patches/100-fix-build-with-mac8
 
 # mac80211 - fix linux 6.11 & add rtw89
 rm -rf package/kernel/mac80211
-git clone https://$github/pmkol/package_kernel_mac80211 package/kernel/mac80211 --depth=1
+git clone https://$github/apadpro/package_kernel_mac80211 package/kernel/mac80211 --depth=1
 rm -rf package/kernel/mac80211/{.git,.github}
 
 # iwinfo: add mt7922 device id
@@ -83,14 +83,14 @@ rm -rf package/kernel/{r8168,r8152,r8101,r8125,r8126}/.git
 rm -f package/kernel/r8168/README.md
 
 # Shortcut Forwarding Engine
-git clone https://$github/pmkol/package_new_shortcut-fe package/new/shortcut-fe --depth=1
+git clone https://$github/apadpro/package_new_shortcut-fe package/new/shortcut-fe --depth=1
 rm -rf package/new/shortcut-fe/{.git,.github}
 # shortcut-fe kernel patch
 curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/601-netfilter-export-udp_get_timeouts-function.patch > target/linux/generic/hack-6.11/601-netfilter-export-udp_get_timeouts-function.patch
 curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/953-net-patch-linux-kernel-to-support-shortcut-fe.patch > target/linux/generic/hack-6.11/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 
 # FullCone module
-git clone https://$github/pmkol/package_new_nft-fullcone package/new/nft-fullcone --depth=1
+git clone https://$github/apadpro/package_new_nft-fullcone package/new/nft-fullcone --depth=1
 rm -rf package/new/nft-fullcone/{.git,.github}
 # fullcone kernel patch
 curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/952-net-conntrack-events-support-multiple-registrant.patch > target/linux/generic/hack-6.11/952-net-conntrack-events-support-multiple-registrant.patch
@@ -99,7 +99,7 @@ curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/982-add-bcm-fullcone
 curl -s https://$mirror/openwrt-23.05/patch/kernel-6.11/net/983-add-bcm-fullcone-nft_masq-support.patch > target/linux/generic/hack-6.11/983-add-bcm-fullcone-nft_masq-support.patch
 
 # IPv6 NAT
-git clone https://$github/pmkol/package_new_nat6 package/new/nat6 --depth=1
+git clone https://$github/apadpro/package_new_nat6 package/new/nat6 --depth=1
 rm -rf package/new/nat6/{.git,.github}
 
 # urngd
